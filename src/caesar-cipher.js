@@ -3,11 +3,11 @@ function caesarCipher(string, key) {
   if (isNaN(key)) return "Invalid key";
   if (!Number.isInteger(key)) return "Invalid key";
   if (key < 0) return "Invalid key";
-
+  const formatedKey = key % 26;
   let cipherText = "";
 
   for (const char of string) {
-    cipherText += rotate(char, key);
+    cipherText += rotate(char, formatedKey);
   }
   return cipherText;
 }

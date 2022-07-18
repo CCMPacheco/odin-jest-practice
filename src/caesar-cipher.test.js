@@ -24,8 +24,8 @@ test("check key equals to 0", () => {
   );
 });
 
-test("String upper and lower case", () => {
-  expect(caesarCipher("AbCdeFgH", 20)).toBe("UvWxyZaB");
+test("check key greater than 26", () => {
+  expect(caesarCipher("AbCdeFgH", 999)).toBe("LmNopQrS");
 });
 
 test("String upper case", () => {
@@ -34,6 +34,10 @@ test("String upper case", () => {
 
 test("String lower case", () => {
   expect(caesarCipher("abcdefgh", 20)).toBe("uvwxyzab");
+});
+
+test("String upper and lower case", () => {
+  expect(caesarCipher("AbCdeFgH", 20)).toBe("UvWxyZaB");
 });
 
 test("String only symbols", () => {
